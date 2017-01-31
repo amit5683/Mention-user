@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.js"></script>
+  <link rel="stylesheet"; href="https://unpkg.com/ng-table@2.0.2/bundles/ng-table.min.css">
+  <script src="https://unpkg.com/ng-table@2.0.2/bundles/ng-table.min.js"></script>
+  <script src="script.js"></script>
+</head>
+<body ng-controller="myCtrl as vm">
+  <div style="margin-top: 50px;">
+    <div class="panel-body panel-no-padding">
+      <div class="dataTables_wrapper form-inline">
+        <table ng-table="vm.tableParams" class="table table-bordered table-hover">
+          <tr ng-repeat="row in $data" ng-form="rowForm">
+            <td title="'First Name'" filter="{firstName: 'text'}" sortable="'firstName'">
+              <span>{{ row.firstName }}</span>
+            </td>
+            <td title="'Last Name'" filter="{lastName: 'text'}" sortable="'lastName'">
+              <span>{{ row.lastName }}</span>
+            </td>
+            <td title="'Age'" filter="{age: 'number'}" sortable="'age'">
+              <span>{{ row.age }}</span>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

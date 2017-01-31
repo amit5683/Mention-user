@@ -1,0 +1,27 @@
+.ui-mention-container {
+  position: relative;
+  [ui-mention] {
+    min-height: 100px;
+    background: none;
+    position: relative;
+    z-index: 2;
+    box-sizing: content-box;
+  }
+.ui-mention-highlight {
+      white-space: pre-wrap;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: white;
+      color: rgba(0,0,0,0);
+      z-index: 1;
+      span {
+        border-radius: 2px;
+        background-color: lightblue;
+        border: 1px solid blue;
+        padding: 0 2px;
+        margin: -1px -3px;
+      }
+  }
